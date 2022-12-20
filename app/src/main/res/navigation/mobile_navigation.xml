@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    android:label="Cadastrar produto"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.gamesstore.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_catalogo"
+        android:name="com.example.gamesstore.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_catalogo">
+        <action
+            android:id="@+id/action_nav_catalogo_to_registerProduct"
+            app:destination="@id/nav_register_product" />
+        <action
+            android:id="@+id/action_nav_catalogo_to_productFragment"
+            app:destination="@id/nav_product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.gamesstore.ui.notifications.NotificationsFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_register_product"
+        android:name="com.example.gamesstore.ui.registerproduct.RegisterProduct"
+        android:label="fragment_register_product"
+        tools:layout="@layout/fragment_register_product" />
+    <fragment
+        android:id="@+id/nav_product"
+        android:name="com.example.gamesstore.product.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" />
+</navigation>
