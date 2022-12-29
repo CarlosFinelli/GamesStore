@@ -1,4 +1,4 @@
-package com.example.gamesstore.ui.notifications
+package com.example.gamesstore.ui.profile
 
 import android.content.Context
 import android.util.Log
@@ -13,7 +13,7 @@ import com.example.gamesstore.classes.User
 import com.example.gamesstore.databinding.FragmentProfileBinding
 import com.google.gson.Gson
 
-class NotificationsViewModel : ViewModel() {
+class RefactorViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is notifications Fragment"

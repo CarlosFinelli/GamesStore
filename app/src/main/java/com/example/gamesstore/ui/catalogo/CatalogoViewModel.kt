@@ -1,17 +1,13 @@
-package com.example.gamesstore.ui.dashboard
+package com.example.gamesstore.ui.catalogo
 
-import android.app.Application
 import android.content.Context
-import android.content.pm.ApplicationInfo
 import android.graphics.Color
 import android.util.Log
 import android.view.View
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -23,7 +19,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken
 import com.google.gson.Gson
 
-class DashboardViewModel : ViewModel() {
+class CatalogoViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"
